@@ -1,20 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion COMPILE_SDK_VERSION as int
-  buildToolsVersion BUILD_TOOLS_VERSION
-
+  compileSdkVersion 23
+  buildToolsVersion "23.0.1"
+//
   defaultConfig {
-    minSdkVersion MIN_SDK_VERSION as int
-    targetSdkVersion TARGET_SDK_VERSION as int
-    versionCode VERSION_CODE as int
-    versionName VERSION_NAME
+    minSdkVersion 17
+    targetSdkVersion 23
+    versionCode 1
+    versionName "fuckit"
   }
 }
-
+//
 dependencies {
-  compile "com.android.support:appcompat-v7:${SUPPORT_PACKAGE_VERSION}"
-  compile "com.android.support:recyclerview-v7:${SUPPORT_PACKAGE_VERSION}"
+  compile "com.android.support:appcompat-v7:23.1.0"
+  compile "com.android.support:recyclerview-v7:23.1.0"
 }
 
 android.libraryVariants.all { variant ->
@@ -37,5 +37,5 @@ android.libraryVariants.all { variant ->
 }
 
 apply from: 'android-artifacts.gradle'
-apply from: 'central-publish.gradle'
-apply from: 'bintray-publish.gradle'
+//apply from: 'central-publish.gradle'
+//apply from: 'bintray-publish.gradle'
